@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ========================================
+       PAGE SETTINGS
+       Information for the browser about this page
+  ======================================== -->
+
+  <!--
+  UTF-8 tells the browser how to read text characters correctly.
+  This allows characters such as ä, é, €, →, etc. to display properly.
+  -->
+  <meta charset="UTF-8">
+
+  <!--
+  Makes the website resize correctly on different screen sizes,
+  including phones and tablets.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  <title> is the name displayed in the browser tab.
+  It does not normally appear on the webpage itself.
+  -->
+  <title>Code as Nature · Fall 2026</title>
+
+  <!--
+  <link> connects this HTML page to another file.
+
+  href tells the browser WHERE that file is located.
+
+  Here we are loading style.css from the same folder as index.html.
+  This CSS file controls the visual appearance of the page.
+  -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       HEADER
+       <header> contains introductory information
+       at the beginning of the page.
+
+       It often contains a title, logo, description,
+       or navigation.
+  ======================================== -->
+
+  <header>
+
+    <!-- <h1> is the main heading of the page -->
+    <h1>Code as Nature Fall 2026</h1>
+
+    <!-- <h2> is a secondary heading -->
+    <h2>✰ Naomi's class archive ✰</h2>
+
+  </header>
+
+
+  <!-- ========================================
+       MAIN CONTENT
+
+       <main> contains the primary content of the page.
+
+       A page normally has one main section.
+  ======================================== -->
+
+  <main>
+
+
+    <!-- ========================================
+         WEEK GRID
+
+         <div> is a general container used to group
+         elements together.
+
+         class="week-grid" gives this container a name
+         that our CSS can use to style it as a grid.
+    ======================================== -->
+
+    <div class="week-grid">
+
+
+      <!-- ========================================
+           WEEK 1
+      ======================================== -->
+
+      <!--
+      <a> creates a link.
+
+      href means "hypertext reference."
+      It tells the browser WHERE to go when the link is clicked.
+
+      Here the browser:
+      1. enters the folder "week1"
+      2. opens the file "index.html"
+
+      class="week" does NOT control where the link goes.
+      It gives the element a name that CSS can use to style it.
+      -->
+
+      <a href="week1/index.html" class="week">
+
+
+        <!--
+        <iframe> displays another webpage INSIDE this webpage.
+
+        src tells the browser which page should appear inside it.
+
+        Here we are displaying week1/preview.html.
+
+        That preview page runs the Week 1 p5.js sketch, so this
+        grid square contains a live version of the sketch instead
+        of a saved image.
+
+        tabindex="-1" prevents the iframe from becoming part of
+        keyboard navigation.
+        -->
+
+        <iframe
+          src="week1/preview.html"
+          class="week-preview"
+          tabindex="-1">
+        </iframe>
+
+        <!-- <h2> is a secondary heading -->
+        <h2>Week 1</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 2
+      ======================================== -->
+
+      <a href="week2/index.html" class="week">
+
+        <!--
+        <img> places an image on the webpage.
+
+        src tells the browser WHERE to find the image.
+
+        Here:
+        images/week2.jpg
+
+        means:
+        1. enter the "images" folder
+        2. find the file "week2.jpg"
+
+        alt provides a text description of the image.
+        It is used by screen readers for accessibility
+        and can appear if the image cannot be loaded.
+        -->
+
+        <img src="images/week2.jpg" alt="Week 2">
+
+        <h2>Week 2</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 3
+      ======================================== -->
+
+      <a href="week3/index.html" class="week">
+
+        <img src="images/week3.jpg" alt="Week 3">
+
+        <h2>Week 3</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 4
+      ======================================== -->
+
+      <a href="week4/index.html" class="week">
+
+        <img src="images/week4.jpg" alt="Week 4">
+
+        <h2>Week 4</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 5
+      ======================================== -->
+
+      <a href="week5/index.html" class="week">
+
+        <img src="images/week5.jpg" alt="Week 5">
+
+        <h2>Week 5</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 6
+      ======================================== -->
+
+      <a href="week6/index.html" class="week">
+
+        <img src="images/week6.jpg" alt="Week 6">
+
+        <h2>Week 6</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 7
+      ======================================== -->
+
+      <a href="week7/index.html" class="week">
+
+        <img src="images/week7.jpg" alt="Week 7">
+
+        <h2>Week 7</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 8
+      ======================================== -->
+
+      <a href="week8/index.html" class="week">
+
+        <img src="images/week8.jpg" alt="Week 8">
+
+        <h2>Week 8</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 9
+      ======================================== -->
+
+      <a href="week9/index.html" class="week">
+
+        <img src="images/week9.jpg" alt="Week 9">
+
+        <h2>Week 9</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 10
+      ======================================== -->
+
+      <a href="week10/index.html" class="week">
+
+        <img src="images/week10.jpg" alt="Week 10">
+
+        <h2>Week 10</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 11
+      ======================================== -->
+
+      <a href="week11/index.html" class="week">
+
+        <img src="images/week11.jpg" alt="Week 11">
+
+        <h2>Week 11</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 12
+      ======================================== -->
+
+      <a href="week12/index.html" class="week">
+
+        <img src="images/week12.jpg" alt="Week 12">
+
+        <h2>Week 12</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 13
+      ======================================== -->
+
+      <a href="week13/index.html" class="week">
+
+        <img src="images/week13.jpg" alt="Week 13">
+
+        <h2>Week 13</h2>
+
+      </a>
+
+
+      <!-- ========================================
+           WEEK 14
+      ======================================== -->
+
+      <a href="week14/index.html" class="week">
+
+        <img src="images/week14.jpg" alt="Week 14">
+
+        <h2>Week 14</h2>
+
+      </a>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- ========================================
+       NAVIGATION
+
+       <nav> groups links that help visitors move
+       around the website.
+
+       Navigation does NOT have to be at the bottom.
+
+       A <nav> could appear:
+       - inside the header
+       - above the main content
+       - in a sidebar
+       - at the bottom
+       - inside a footer
+
+       We are placing this navigation near the bottom
+       because we want these controls at the end of
+       every page.
+  ======================================== -->
+
+  <nav class="page-nav">
+
+
+    <!--
+    <a> creates a link.
+
+    href="index.html" tells the browser to open
+    the index.html file in the current folder.
+
+    Because this is already the homepage, this link
+    simply reloads the homepage.
+    -->
+
+    <a href="index.html">[ RETURN HOME ]</a>
+
+
+    <!--
+    This link uses JavaScript instead of a file path.
+
+    history.back() tells the browser to return to
+    the previous page in its browsing history.
+    -->
+
+    <a href="javascript:history.back()">[ GO BACK ]</a>
+
+
+  </nav>
+
+
+  <!-- ========================================
+       FOOTER
+
+       <footer> contains information that belongs
+       at the end of the page.
+
+       A footer is NOT the same thing as navigation.
+
+       Footers often contain:
+       - credits
+       - dates
+       - copyright information
+       - contact information
+       - additional links
+
+       A footer CAN contain navigation, but it
+       doesn't have to.
+  ======================================== -->
+
+  <footer>
+
+    <!-- <p> creates a paragraph -->
+    <p>Code as Nature · Fall 2026</p>
+
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ========================================
+       PAGE SETTINGS
+       Information for the browser about this page
+  ======================================== -->
+
+  <!--
+  UTF-8 tells the browser how to read text characters correctly.
+  -->
+  <meta charset="UTF-8">
+
+  <!--
+  Makes the page resize correctly on different screen sizes.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  The title appears in the browser tab.
+  -->
+  <title>404 · Code as Nature</title>
+
+  <!--
+  Connects this HTML page to our main CSS file.
+
+  href tells the browser WHERE to find the file.
+  Because style.css is in the same folder as 404.html,
+  we can simply write "style.css".
+  -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<!--
+class="error-page" gives this particular page a name
+that CSS can use.
+
+This allows us to give the 404 page special styling
+without changing every other page on the website.
+-->
+
+<body class="error-page">
+
+
+  <!-- ========================================
+       MAIN CONTENT
+  ======================================== -->
+
+  <!--
+  class="error-container" lets CSS control the position
+  and layout of everything on the error page.
+  -->
+
+  <main class="error-container">
+
+
+    <!-- ========================================
+         ASCII ART
+
+         <pre> means "preformatted text."
+
+         Unlike a normal paragraph, the browser preserves
+         all spaces and line breaks exactly as they are written.
+
+         This is useful for ASCII art because changing the
+         spacing would destroy the image.
+    ======================================== -->
+
+<pre class="ascii">
+                ,.-:~:'*:~-.°      .:'/*/'`:,·:~·-:.,               .:'/*/'`:,·:~·-:.,                         ,.-:^*:*:^:~,'           .:'/*/'`:,·:~·-:.,           
+            .·´:::::::::::::::;     /::/:/:::/:::;::::::/`':.,'        /::/:/:::/:::;::::::/`':.,'               ,:´:::::::::::::::/_         /::/:/:::/:::;::::::/`':.,'     
+          /::;:-·~^*^~-:;:/ °     /·*'`·´¯'`^·-~·:-'::;:::'`;       /·*'`·´¯'`^·-~·:-'::;:::'`;             /::;:-·^*'*'^~-;:/::/`;       /·*'`·´¯'`^·-~·:-'::;:::'`;    
+      ,.-/:´     .,       ;/       '\                       '`;::'i    '\                       '`;::'i          /:´    ,.-.,_,.'´::/:::';       '\                       '`;::'i  
+     /::';      ,'::`:~.-:´;         '`;        ,- .,        'i:'/      '`;        ,- .,        'i:'/        ,/    ,:´';         ;'´¯`,:::'i      '`;        ,- .,        'i:'/   
+    /;:- ´        `'·-·;:'/' _         i       i':/:::';       ;/'         i       i':/:::';       ;/'      ,'     ';:::`,       ,:     ';::i       i       i':/:::';       ;/'    
+  /     ;:'`:.., __,.·'::/:::';        i       i/:·'´       ,:''           i       i/:·'´       ,:''        ;      ';:::/:`::^*:´;      i::';       i       i/:·'´       ,:''      
+ ;'      ';:::::::::::::::/;;::/        '; '    ,:,     ~;'´:::'`:,        '; '    ,:,     ~;'´:::'`:,      i       `;/::::::::,·´      ';:/'       '; '    ,:,     ~;'´:::'`:,   
+ ¦         '`·-·:;::·-·'´   ';:/        'i      i:/\       `;::::/:'`;'     'i      i:/\       `;::::/:'`;'   ';         '` *^*'´         .'/         'i      i:/\       `;::::/:'`;'
+ '\                         /'           ;     ;/   \       '`:/::::/'      ;     ;/   \       '`:/::::/'    '\                         /            ;     ;/   \       '`:/::::/'
+   `·,                  ,·'             ';   ,'       \         '`;/'       ';   ,'       \         '`;/'       `·,                ,-·´              ';   ,'       \         '`;/' 
+       '`~·- . , . -·'´                  `'*´          '`~·-·^'´           `'*´          '`~·-·^'´             '`*~·--·~^'´                   `'*´          '`~·-·^'´
+</pre>
+
+
+    <!-- ========================================
+         ERROR MESSAGE
+
+         <section> groups a related piece of content.
+
+         class="error-message" allows CSS to style this
+         particular section.
+    ======================================== -->
+
+    <section class="error-message">
+
+      <!-- Main error heading -->
+      <h1>404: PAGE NOT FOUND</h1>
+
+      <!--
+      <br> creates a line break without starting
+      a completely new paragraph.
+      -->
+
+      <p>
+        The requested environment does not exist.<br>
+        It may not have been created yet.
+      </p>
+
+
+      <!-- ========================================
+           NAVIGATION
+
+           <nav> groups links used to move around the website.
+
+           Navigation does not have to be here.
+           It could appear in a header, footer, sidebar,
+           or somewhere else on the page.
+
+           On this page we place it underneath the error message.
+      ======================================== -->
+
+      <nav class="page-nav">
+
+
+        <!--
+        <a> creates a link.
+
+        href means "hypertext reference" and tells the browser
+        WHERE the link should go.
+
+        index.html is our homepage and is located in the
+        same folder as this 404.html file.
+        -->
+
+        <a href="index.html">[ RETURN HOME ]</a>
+
+
+        <!--
+        This link uses a small piece of JavaScript.
+
+        history.back() tells the browser to return to
+        the previous page in its browsing history.
+        -->
+
+        <a href="javascript:history.back()">[ GO BACK ]</a>
+
+
+      </nav>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

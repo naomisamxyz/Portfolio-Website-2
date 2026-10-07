@@ -1,0 +1,725 @@
+/* ========================================
+   CUSTOM FONT
+
+   @font-face allows us to load a font file that is
+   stored inside our own website.
+
+   This section is currently commented out, so the
+   browser ignores it.
+
+   To use it:
+   1. Put a .woff2 font inside the "fonts" folder.
+   2. Replace MyFont.woff2 with its filename.
+   3. Remove the /* and * / surrounding this section.
+
+   font-family: The name we want to use for this font in our CSS
+   src: Where the actual font file is located
+======================================== */
+
+/*
+@font-face {
+
+  font-family: "MyFont";
+  src: url("fonts/MyFont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+
+/* ========================================
+   GLOBAL
+
+   These rules affect the entire website.
+======================================== */
+
+
+/*
+* means ALL elements on the page.
+
+box-sizing: border-box makes width and height easier
+to understand because padding and borders are included
+inside the dimensions we specify.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*
+body represents the visible contents of the webpage.
+
+These properties establish the basic appearance that
+the rest of the website inherits.
+*/
+
+body {
+
+  /* Remove the browser's default margin */
+  margin: 0;
+
+  /* Page colors */
+  background: white;
+  color: black;
+
+  /*
+  font-family lists fonts in order of preference.
+
+  The browser first tries Courier New.
+  If it is unavailable, it tries Courier.
+  "monospace" is the final generic fallback.
+  */
+  font-family: "Courier New", Courier, monospace;
+
+  font-size: 16px;
+
+  /*
+  line-height controls the vertical distance
+  between lines of text.
+  */
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   LINKS
+
+   <a> elements create links in HTML.
+======================================== */
+
+a {
+
+  /* Link text color */
+  color: black;
+
+  /* Remove the default underline */
+  text-decoration: none;
+}
+
+
+/*
+:hover applies these styles only while
+the mouse is positioned over the link.
+*/
+
+a:hover {
+  background: black;
+  color: white;
+}
+
+
+/* ========================================
+   HEADER
+
+   These styles apply to the <header>
+   section of our HTML.
+======================================== */
+
+header {
+
+  /*
+  padding creates space INSIDE an element,
+  between its content and its edges.
+  */
+  padding: 40px;
+}
+
+
+/*
+This specifically selects an <h1> that is
+inside a <header>.
+*/
+
+header h1 {
+
+  /* Remove the heading's default margin */
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: normal;
+
+  /* Adds space between individual letters */
+  letter-spacing: 2px;
+}
+
+
+/*
+This selects paragraphs inside the header.
+*/
+
+header p {
+
+  /*
+  margin values go:
+  TOP RIGHT BOTTOM LEFT
+  */
+
+  margin: 10px 0 0 0;
+}
+
+
+/* ========================================
+   MAIN
+
+   <main> contains the primary content
+   of each page.
+======================================== */
+
+main {
+  padding: 40px;
+}
+
+
+/* ========================================
+   WEEK GRID
+
+   This controls the project grid on
+   the homepage.
+======================================== */
+
+.week-grid {
+
+  /*
+  display: grid turns this container into
+  a CSS Grid layout.
+  */
+
+  display: grid;
+
+  /*
+  Create 4 columns of equal width.
+
+  1fr means one fraction of the available space.
+
+  repeat(4, 1fr) therefore means:
+
+  1fr 1fr 1fr 1fr
+  */
+
+  grid-template-columns: repeat(4, 1fr);
+
+  /*
+  gap controls the space between grid items.
+
+  50px = vertical gap
+  25px = horizontal gap
+  */
+
+  gap: 50px 25px;
+}
+
+
+/* ========================================
+   INDIVIDUAL WEEK
+======================================== */
+
+.week {
+
+  /*
+  Makes the link behave like a block,
+  allowing it to contain the entire image
+  and title as one clickable area.
+  */
+
+  display: block;
+}
+
+
+/* ========================================
+   WEEK IMAGES
+
+   This selects <img> elements that are
+   inside an element with class="week".
+======================================== */
+
+.week img {
+
+  display: block;
+
+  /*
+  Fill the entire width of the grid cell.
+  */
+
+  width: 100%;
+
+  /*
+  Keep the image container square.
+
+  1 / 1 means:
+  width and height have the same proportion.
+  */
+
+  aspect-ratio: 1 / 1;
+
+  /*
+  Fill the square without stretching the image.
+  Parts of the image may be cropped.
+  */
+
+  object-fit: cover;
+}
+
+
+/* ========================================
+   LIVE WEEK PREVIEW
+
+   Week 1 uses an <iframe> instead of an image.
+
+   The iframe loads preview.html, which runs
+   the actual p5.js sketch inside the grid.
+======================================== */
+
+.week-preview {
+
+  width: 100%;
+
+  /* Make the preview square */
+  aspect-ratio: 1 / 1;
+
+  /* Remove the iframe's default border */
+  border: none;
+
+  display: block;
+
+  /*
+  Ignore mouse interaction inside the iframe.
+
+  This allows the entire grid item to remain
+  clickable instead of the miniature sketch
+  capturing the mouse.
+  */
+
+  pointer-events: none;
+}
+
+/* ========================================
+   SKETCH PREVIEW PAGE
+======================================== */
+
+.preview-page {
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-page canvas {
+  display: block;
+}
+
+/* ========================================
+   WEEK TITLES
+======================================== */
+
+.week h2 {
+
+  margin: 10px 0 0 0;
+
+  font-size: 16px;
+  font-weight: normal;
+}
+
+
+/* ========================================
+   WEEK HOVER EFFECTS
+======================================== */
+
+
+/*
+The week itself should remain transparent
+when hovered.
+*/
+
+.week:hover {
+  background: transparent;
+}
+
+
+/*
+Fade the image when the mouse is over
+the week project.
+*/
+
+.week:hover img {
+  opacity: 0.5;
+}
+
+
+/*
+Change the title to white text on black
+when the week is hovered.
+*/
+
+.week:hover h2 {
+
+  background: black;
+  color: white;
+
+  /*
+  inline-block makes the black background
+  only as wide as the text instead of
+  filling the entire grid cell.
+  */
+
+  display: inline-block;
+}
+
+
+/* ========================================
+   FOOTER
+
+   Controls the appearance of the <footer>.
+
+   The footer contains information belonging
+   at the end of the page, such as credits,
+   dates, copyright, or additional links.
+
+   It is separate from our navigation.
+======================================== */
+
+footer {
+
+  padding: 40px;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   PAGE NAVIGATION
+
+   .page-nav styles any HTML element with
+   class="page-nav".
+
+   In our HTML we use:
+
+   <nav class="page-nav">
+
+   Navigation can appear anywhere on a webpage.
+   We happen to place ours near the bottom.
+======================================== */
+
+.page-nav {
+
+  /*
+  Flexbox arranges the navigation links
+  next to each other.
+  */
+
+  display: flex;
+
+  /* Center them horizontally */
+  justify-content: center;
+
+  /* Space between the links */
+  gap: 80px;
+
+  /* Space around the navigation */
+  padding: 50px 20px;
+
+  font-size: 20px;
+}
+
+
+/*
+Add a little internal space around
+each navigation link.
+*/
+
+.page-nav a {
+  padding: 2px 5px;
+}
+
+
+/* ========================================
+   404 PAGE
+
+   These styles are specific to elements
+   used by 404.html.
+======================================== */
+
+
+/*
+.error-page means:
+
+Any HTML element with:
+
+class="error-page"
+
+In 404.html this class is attached to <body>.
+*/
+
+.error-page {
+
+  /*
+  Hide anything that extends beyond the
+  page horizontally.
+  */
+
+  overflow-x: hidden;
+}
+
+
+/* ========================================
+   ERROR CONTAINER
+======================================== */
+
+.error-container {
+
+  /*
+  100vh means 100% of the viewport height.
+
+  The container will therefore be at least
+  as tall as the browser window.
+  */
+
+  min-height: 100vh;
+
+  /*
+  Flexbox is used here to position the
+  contents of the error page.
+  */
+
+  display: flex;
+
+  /*
+  Stack the elements vertically instead
+  of horizontally.
+  */
+
+  flex-direction: column;
+
+  /* Center horizontally */
+  align-items: center;
+
+  /* Center vertically */
+  justify-content: center;
+
+  padding: 40px;
+}
+
+
+/* ========================================
+   ASCII IMAGE
+
+   This styles the <pre class="ascii">
+   element in 404.html.
+======================================== */
+
+.ascii {
+
+  margin: 0;
+
+  /*
+  ASCII art requires a monospace font because
+  every character needs to occupy the same width.
+  */
+
+  font-family: "Courier New", Courier, monospace;
+
+  /*
+  clamp() creates a responsive value.
+
+  5px = smallest allowed size
+  0.72vw = preferred size based on window width
+  12px = largest allowed size
+  */
+
+  font-size: clamp(5px, 0.72vw, 12px);
+
+  line-height: 1.15;
+
+  /*
+  Preserve all spaces and line breaks.
+
+  This is essential for ASCII art.
+  */
+
+  white-space: pre;
+
+  /*
+  Disable special font combinations that could
+  change the spacing between ASCII characters.
+  */
+
+  font-variant-ligatures: none;
+
+  letter-spacing: 0;
+
+  /*
+  Slightly compress the ASCII art horizontally.
+  */
+
+  transform: scaleX(0.9);
+
+  /*
+  Scale from the center instead of one side.
+  */
+
+  transform-origin: center;
+}
+
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.error-message {
+
+  margin-top: 80px;
+
+  text-align: center;
+}
+
+
+.error-message h1 {
+
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: normal;
+
+  letter-spacing: 2px;
+}
+
+
+.error-message p {
+
+  margin-top: 45px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN: TABLET
+
+   @media allows CSS rules to change depending
+   on the size of the browser window.
+
+   These rules activate when the browser
+   becomes 900px wide or smaller.
+======================================== */
+
+@media (max-width: 900px) {
+
+  /*
+  Change the homepage from four columns
+  to two columns.
+  */
+
+  .week-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN: PHONE
+
+   These rules activate when the browser
+   becomes 500px wide or smaller.
+======================================== */
+
+@media (max-width: 500px) {
+
+
+  /*
+  Reduce the amount of empty space around
+  major sections on small screens.
+  */
+
+  header,
+  main,
+  footer {
+    padding: 20px;
+  }
+
+
+  /*
+  Change the homepage grid to one column.
+  */
+
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Reduce spacing around the error page */
+
+  .error-container {
+    padding: 20px;
+  }
+
+
+  /*
+  Stack navigation links vertically instead
+  of placing them next to each other.
+  */
+
+  .page-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+}
+
+/* ========================================
+   SPECIFIC STYLES FOR MEME GENERATOR
+======================================== */
+
+.meme {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.meme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meme-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 80%;
+  margin: 0;
+
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+
+  text-shadow: 2px 2px 0 black;
+}
+
+button {
+  background-color: white;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
