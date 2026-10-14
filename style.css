@@ -18,12 +18,12 @@
 
 
 @font-face {
-
-  font-family: "MyFont";
+  font-family: "OCRA";
   src: url("fonts/OCRA.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 
 
 
@@ -70,7 +70,7 @@ body {
   If it is unavailable, it tries Courier.
   "monospace" is the final generic fallback.
   */
-  font-family: "MyFont", "Courier New", Courier, monospace;
+  font-family: "OCRA", "Courier New", Courier, monospace;
 
   font-size: 16px;
 
