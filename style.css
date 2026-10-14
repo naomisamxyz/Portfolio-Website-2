@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "OCRA";
-  src: url("fonts/OCRA.woff2") format("woff2");
+  src: url("./fonts/OCR-A.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
