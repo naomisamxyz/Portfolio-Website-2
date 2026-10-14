@@ -16,15 +16,15 @@
    src: Where the actual font file is located
 ======================================== */
 
-/*
+
 @font-face {
 
   font-family: "MyFont";
-  src: url("fonts/MyFont.woff2") format("woff2");
+  src: url("fonts/OCRA.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-*/
+
 
 
 /* ========================================
@@ -70,7 +70,7 @@ body {
   If it is unavailable, it tries Courier.
   "monospace" is the final generic fallback.
   */
-  font-family: "Courier New", Courier, monospace;
+  font-family: "MyFont", "Courier New", Courier, monospace;
 
   font-size: 16px;
 
@@ -675,7 +675,18 @@ In 404.html this class is attached to <body>.
 }
 
 /* ========================================
-   SPECIFIC STYLES FOR MEME GENERATOR
+   WEEK 2: OPEN PORTAL
+======================================== */
+
+.openportal {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ========================================
+   WEEK 5: MEME GENERATOR
 ======================================== */
 
 .meme {
@@ -689,6 +700,7 @@ In 404.html this class is attached to <body>.
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .meme-text {
@@ -717,9 +729,20 @@ button {
 }
 
 
+/* ========================================
+   WEEK 6: MEME DATABASE
+======================================== */
 
+#meme-database {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
 
-
-
-
-
+/* Only change memes that are inside the database */
+#meme-database .meme {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  min-width: 0;
+}
