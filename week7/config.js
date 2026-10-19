@@ -1,2 +1,2 @@
-// Set this to the HTTPS URL assigned by Render after deployment.
-window.COLLECTIVE_PARTICLES_URL = '';
+// Public multiplayer app hosted on Render.
+window.COLLECTIVE_PARTICLES_URL = 'https://collective-particles.onrender.com';
