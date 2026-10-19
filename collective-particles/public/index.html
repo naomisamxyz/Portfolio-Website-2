@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collective Particles</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="sketch.js" defer></script>
+</head>
+<body>
+  <header><h1>Collective Particles</h1><p>✰ Shared particle field ✰</p></header>
+  <main>
+    <nav class="force-controls" aria-label="Force mode">
+      <button data-mode="attract" class="selected">[ 1 · ATTRACT ]</button>
+      <button data-mode="repel">[ 2 · REPEL ]</button>
+      <button data-mode="vortex">[ 3 · VORTEX ]</button>
+    </nav>
+    <div id="canvas-holder"></div>
+    <p id="your-color" aria-live="polite"></p>
+    <p id="status">Connecting…</p>
+    <p class="instructions">Move the pointer to position your force. Hold mouse or touch to activate it. Press 1, 2, or 3 to change mode.</p>
+  </main>
+  <nav class="page-nav" aria-label="Page navigation">
+    <a href="https://naomisamxyz.github.io/Portfolio-Website-2/">[ RETURN HOME ]</a>
+    <a href="standalone.html">[ STANDALONE VERSION ]</a>
+  </nav>
+  <footer><p>Code as Nature · Fall 2026</p></footer>
+</body>
+</html>

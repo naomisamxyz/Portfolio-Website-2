@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "OCRA";
+  src: url("fonts/OCRA.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #000; font: 16px/1.5 "OCRA", "Courier New", Courier, monospace; }
+header { padding: 40px; }
+header h1 { margin: 0; font-size: 28px; font-weight: normal; letter-spacing: 2px; }
+header p { margin: 10px 0 0; }
+main { padding: 0 40px 40px; }
+.force-controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+button { cursor: pointer; padding: 10px 20px; border: 1px solid #000; border-radius: 0; background: #fff; color: #000; font: inherit; font-size: 20px; }
+button.selected, button:hover { background: #000; color: #fff; }
+button:focus-visible, a:focus-visible { outline: 2px solid #000; outline-offset: 4px; }
+#canvas-holder { max-width: 900px; }
+canvas { display: block; width: 100% !important; height: auto !important; touch-action: none; border: 1px solid #000; }
+.instructions { max-width: 900px; margin-top: 24px; }
+a { color: #000; text-decoration: none; }
+a:hover { background: #000; color: #fff; }
+#status { font-size: 13px; }
+.page-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 80px; padding: 50px 20px; font-size: 20px; }
+.page-nav a { padding: 2px 5px; }
+footer { padding: 40px; font-size: 13px; }
+footer p { margin: 0; }
+@media (max-width: 500px) {
+  header, footer { padding: 20px; }
+  main { padding: 0 20px 20px; }
+  header h1 { font-size: 24px; }
+  button { padding: 8px 10px; font-size: 16px; }
+  .force-controls { gap: 8px; }
+  .page-nav { flex-direction: column; align-items: center; gap: 15px; font-size: 16px; }
+}
+
+/* Compact view used inside the portfolio iframe. */
+.embed-page main { padding: 16px; }
+.embed-page #canvas-holder { max-width: none; }
+.embed-page .force-controls { margin-bottom: 16px; }
+.embed-page button { font-size: 16px; padding: 8px 12px; }
+.embed-page .instructions { max-width: none; font-size: 13px; }
+.embed-page #your-color { margin-bottom: 0; }
+.embed-page #status { margin-top: 4px; }
