@@ -739,7 +739,6 @@ button {
   gap: 20px;
 }
 
-/* Only change memes that are inside the database */
 #meme-database .meme {
   width: 100%;
   height: auto;
