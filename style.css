@@ -60,7 +60,7 @@ body {
   margin: 0;
 
   /* Page colors */
-  background: white;
+  background: none;
   color: black;
 
   /*
@@ -170,6 +170,14 @@ main {
   padding: 40px;
 }
 
+#backround {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Ensure the canvas is behind other content */
+}
 
 /* ========================================
    WEEK GRID
